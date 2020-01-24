@@ -20,10 +20,11 @@ class App extends React.Component {
 
       imagesList: [
         "https://cdn.pixabay.com/photo/2017/01/23/09/21/learn-2001838_960_720.jpg",
-        // "https://cdn.pixabay.com/photo/2016/03/09/09/17/computer-1245714_960_720.jpg",
-        
-        // 'assets/imag03terceiroprojeto',
-        // 'assets/imag04terceiroprojeto'
+        "https://cdn.pixabay.com/photo/2016/03/09/09/17/computer-1245714_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2018/05/08/08/44/artificial-intelligence-3382507_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2014/05/03/00/45/computer-336628_960_720.jpg", 
+        "https://cdn.pixabay.com/photo/2016/09/09/20/44/robot-1658023_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" 
       ],
       counter: 0
     }
@@ -36,13 +37,13 @@ class App extends React.Component {
     if (this.state.counter > 0) {
       this.setState({ counter: this.state.counter - 1 })
     } else {
-      this.setState({ counter: 3 })
+      this.setState({ counter: 5})
     }
     document.getElementById('img').setAttribute('src', this.state.imagesList[this.state.counter]);
   }
 
   right = (event) => {
-    if (this.state.counter < 3) {
+    if (this.state.counter < 5) {
       this.setState({ counter: this.state.counter + 1 })
     } else {
       this.setState({ counter: 0 })
@@ -72,10 +73,7 @@ class App extends React.Component {
           <main class="main">
             <bottom onClick={this.left}>left</bottom>
             <img class='mainimag01' id="img" src="https://cdn.pixabay.com/photo/2017/01/23/09/21/learn-2001838_960_720.jpg" />
-            <bottom onClick={this.right} id="right">right</bottom>
-            {/* <img src="https://cdn.pixabay.com/photo/2016/03/27/18/54/technology-1283624_960_720.jpg" />
-            <img src="assets/imag03terceiroprojeto" />
-            <img src="assets/imag04terceiroprojeto" /> */}
+            <bottom onClick={this.right} id="right">right</bottom>                      
           </main>          
         </body>
       </div>
